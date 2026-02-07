@@ -1,0 +1,18 @@
+[language-server.rust-analyzer.config.inlayHints]
+typeHints.enable = true
+returnTypeHints.enable = "always"
+chainingHints.enable = true
+closingBraceHints.enable = true
+
+[language-server.typescript-language-server.config.typescript.inlayHints]
+includeInlayParameterNameHints = "all"
+includeInlayFunctionLikeReturnTypeHints = true
+includeInlayVariableTypeHints = true
+
+[language-server.typescript-language-server.config.javascript.inlayHints]
+includeInlayParameterNameHints = "all"
+includeInlayFunctionLikeReturnTypeHints = true
+includeInlayVariableTypeHints = true
+
+[language-server.pylsp.config.pylsp.plugins.jedi.inlay_hints]
+enable = true
