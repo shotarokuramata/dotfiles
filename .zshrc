@@ -26,3 +26,14 @@ setopt hist_ignore_all_dups
 
 # moonbit
 export PATH="$HOME/.moon/bin:$PATH"
+
+export PATH="$HOME/bin:$PATH"
+
+export EDITOR="hx"
+
+# WezTerm OSC 7: カレントディレクトリの通知（split pane時のcwd引き継ぎに必要）
+__osc7_cwd() {
+  printf "\033]7;file://%s%s\033\\" "$(hostname)" "$PWD"
+}
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd __osc7_cwd

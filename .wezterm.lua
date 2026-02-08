@@ -73,8 +73,15 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
   }
 end)
 
--- Changing the default program: wsl
-config.default_prog = { "wsl.exe", "--distribution", "ubuntu", "--cd", "~" }
+-- WSL Domain の設定（default_prog の代わりに使用）
+config.wsl_domains = {
+  {
+    name = "WSL:ubuntu",
+    distribution = "ubuntu",
+    default_cwd = "~",
+  },
+}
+config.default_domain = "WSL:ubuntu"
 
 -- and finally, return the configuration to wezterm
 return config
